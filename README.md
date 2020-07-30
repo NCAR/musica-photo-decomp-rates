@@ -2,12 +2,19 @@
 Formerly known as TUV in MICM
 
 
-Works on modeling2.acom.ucar.edu
+To build the library and tests:
 
 ```
- cd driver
+ mkdir build
+ cd build
+ ccmake ..
  make
- driver.exe
+```
+
+To run the tests, from the `build/` folder:
+
+```
+  make test
 ```
 
 Options are in test_nml
