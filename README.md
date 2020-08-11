@@ -42,6 +42,8 @@ cd test/integration/
 
 ctest -V
 
+ctest3 -V -R integration
+
 ```
 
 For PGI:
