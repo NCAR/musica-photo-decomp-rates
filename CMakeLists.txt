@@ -1,8 +1,25 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.17)
 project(MUSICA)
 enable_language(Fortran)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
+
+################################################################################
+# compiler debug flags
+
+if (DEFINED CMAKE_Fortran_FLAGS_DEBUG_INIT AND
+    "${CMAKE_Fortran_FLAGS_DEBUG_INIT}" MATCHES "${CMAKE_Fortran_FLAGS_DEBUG}")
+  if (CMAKE_Fortran_COMPILER_ID STREQUAL "GNU")
+    SET(CMAKE_Fortran_FLAGS_DEBUG "-g -ggdb -ffpe-trap='invalid,zero,overflow' -finit-real=snan -fcheck=bounds")
+  elseif (CMAKE_Fortran_COMPILER_ID STREQUAL "PGI")
+    SET(CMAKE_Fortran_FLAGS_DEBUG "-g -Ktrap=fp -Mbounds -Kieee -traceback")
+  endif()
+endif()
+
+message("Fortran compiler settings:")
+message(STATUS "Fortran Compiler ID: " ${CMAKE_Fortran_COMPILER_ID})
+message(STATUS "Fortran Compiler RELEASE Flags: " ${CMAKE_Fortran_FLAGS_RELEASE})
+message(STATUS "Fortran Compiler DEBUG Flags: " ${CMAKE_Fortran_FLAGS_DEBUG})
 
 ################################################################################
 # NetCDF library
@@ -28,6 +45,8 @@ find_library(NETCDF_FORTRAN_LIB netcdff
     /opt/local/lib)
   set(NETCDF_LIBS ${NETCDF_C_LIB} ${NETCDF_FORTRAN_LIB})
 include_directories(${NETCDF_INCLUDE_DIR})
+
+message(STATUS "Fortran netcdf lib: " ${NETCDF_FORTRAN_LIB})
 
 ################################################################################
 # copy photolysis input data to build directory
