@@ -15,7 +15,7 @@ add_subdirectory(integration)
 ################################################################################
 # shared module tests
 
-add_executable(share_numer share/numer.F90)
+add_executable(share_numer share/numer_test.F90)
 add_unit_test(share_numer)
 
 ################################################################################

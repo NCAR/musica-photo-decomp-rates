@@ -11,7 +11,7 @@ set(PHOTO_SRC oxygen_xsect/la_srb_mod.F90
               rad_xfer/tuv_radiation_transfer.F90
               rad_xfer/tuv_subs.F90
               share/module_xsections.F90
-              share/numer.F90
+              share/numer_mod.F90
               share/params_mod.F90
               share/phot_kind_mod.F90
               share/phot_util_mod.F90
