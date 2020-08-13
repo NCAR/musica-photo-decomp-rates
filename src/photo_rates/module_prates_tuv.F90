@@ -3,7 +3,7 @@ module  module_prates_tuv
   use module_rxn, only : xsqy_table => xsqy_tab, the_subs, npht_tab, rxn_init
   use module_rxn, only : get_initialization, set_initialization
   use wavelength_grid,only: nwave, wl, wc
-  use params_mod, only : hc, qnan
+  use params_mod, only : hc
   
   implicit none
 
@@ -35,7 +35,6 @@ module  module_prates_tuv
   integer, protected, allocatable :: rxn_ndx(:)
 
   real(rk) :: esfact = 1.0_rk
-  real(rk) :: xnan
 
 contains
 
@@ -55,8 +54,6 @@ contains
     integer :: astat
     logical :: rxn_initialized
     real(rk) :: dummy(nlevs)
-
-    xnan = qnan()
     
     is_full_tuv = full_tuv
     nj = size(jnames)
@@ -184,9 +181,6 @@ contains
     real(rk) :: sq2d(nlevs,nwave)
     real(rk) :: sq1d(nwave,1)
 
-    tuv_prate = xnan
-    rad_fld_tpose = xnan
-
     if( .not. is_full_tuv ) then
        if( any( .not. xsqy_is_zdep(:) ) ) then
           rad_fld_tpose = transpose( rad_fld )
@@ -196,8 +190,6 @@ contains
     endif
 
     rate_loop: do n = 1,nj
-       xsect = xnan
-       xsqy = xnan
        !---------------------------------------------------------------------
        ! set cross-section x quantum yields
        !---------------------------------------------------------------------
@@ -309,7 +301,6 @@ contains
     endif
 
     dw(:nwave) = wl(2:nwave+1) - wl(1:nwave)
-    photon_flux(:nwave) = xnan
 
     !---------------------------------------------------------------------
     !	... read arrays

@@ -44,12 +44,10 @@
               192.3_rk, 194.2_rk, 196.1_rk, 198.0_rk, 200.0_rk, &
               202.0_rk, 204.1_rk, 205.8_rk/) ! 17 SRB bands
 
-      real(rk) :: xnan
-
       contains
 
       subroutine la_srb_init( errmsg, errflg )
-        use params_mod, only: input_data_root, qnan
+        use params_mod, only: input_data_root
         use wavelength_grid, only: nwave, wc
         use netcdf
 
@@ -59,8 +57,6 @@
         integer :: ncid, dimid, varid, iw, i
         integer :: astat, ret
         character(len=512) :: filepath
-
-        xnan = qnan()
 
         filepath = trim(input_data_root)//'/chebev_coeffs.nc'
 
@@ -248,8 +244,6 @@
      if (nchebev_wave<1) then
          errflg = 1
          errmsg = 'la_srb_comp not initialized'
-         srb_o2_xs = xnan
-         dto2 = xnan
          return
       end if
       
