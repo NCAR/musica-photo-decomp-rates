@@ -32,14 +32,5 @@ module params_mod
 
   ! delta for adding points at beginning or end of data grids
   real(rk), parameter :: deltax = 1.E-5_rk
-
-contains
-
-  ! quiet NaN
- function qnan() result(x)
-    USE,INTRINSIC :: IEEE_ARITHMETIC
-    real(rk) :: x
-    x = IEEE_VALUE(x,IEEE_QUIET_NAN)
-  end function qnan
  
 end module params_mod

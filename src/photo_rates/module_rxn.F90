@@ -7,7 +7,7 @@
       module module_rxn
 
       use phot_kind_mod, only: rk => kind_phot
-      use params_mod, only: largest, deltax, input_data_root, kin, qnan
+      use params_mod, only: largest, deltax, input_data_root, kin
       use  numer_mod, only: addpnt, inter2, inter4
       
       implicit none
@@ -81,7 +81,7 @@
       end interface
 
       type(xsqy_subs), allocatable :: the_subs(:)
-      real(rk) :: xnan
+      real(rk), parameter :: initval = -huge(rk)
 
       real(rk), parameter :: wlla(2)  = (/ 121.4_rk, 121.9_rk/) ! Lyamn Alpha limits
       integer :: la_ndx = -1
@@ -121,11 +121,11 @@
       errflg = 0
 
       if (present(sq)) then
-         sq = xnan
+         sq = initval
       end if
 
       if( initialize ) then
-        yg = xnan
+        yg = initval
         CALL readit
         if( xsqy_tab(j)%qyld == 1._rk ) then
 !*** quantum yield assumed to be unity
@@ -193,7 +193,6 @@
       
       errmsg = ' '
       errflg = 0
-      xnan = qnan()
 
       ! find lyman alpha band
       wc(1:nw-1) = 0.5_rk*(wl(1:nw-1)+wl(2:nw))
@@ -1619,8 +1618,8 @@
 
       errmsg = ' '
       errflg = 0
-      xs = xnan
-      qy1d = xnan
+      xs = initval
+      qy1d = initval
 
       if( .not. initialize ) then
 
@@ -1703,8 +1702,8 @@
  !*************** NO2 photodissociation
 
       if( initialize ) then
-         yg1 = xnan 
-         yg2 = xnan
+         yg1 = initval 
+         yg2 = initval
         CALL readit
         ydel(1:nw-1) = yg1(1:nw-1) - yg2(1:nw-1)
       else
@@ -5886,7 +5885,7 @@
         integer :: chnl
 
         if (present(sq)) then
-           sq = xnan
+           sq = initval
         end if
 
         if( initialize ) then
@@ -5993,8 +5992,8 @@
           !
           !          120 nm through 200 nm
           !-----------------------------------------------------------
-          x1 = xnan
-          y1 = xnan
+          x1 = initval
+          y1 = initval
           n = xsqy_tab(j)%filespec%nread(1)
           call base_read( filespec=xsqy_tab(j)%filespec%filename(1), &
                errmsg=errmsg, errflg=errflg, &
@@ -6012,9 +6011,9 @@
           !     ... REF: JPL06 218K
           !         from 196.078 to 342.5 nm
           !-------------------------------------------------------
-          x1 = xnan
-          y1 = xnan
-          y2 = xnan
+          x1 = initval
+          y1 = initval
+          y2 = initval
           n = xsqy_tab(j)%filespec%nread(2)
           call base_read( filespec=xsqy_tab(j)%filespec%filename(2), &
                errmsg=errmsg, errflg=errflg, &
@@ -6029,9 +6028,9 @@
           !     ... REF: JPL06 293-298K
           !         from 185.185 to 827.500 nm
           !-------------------------------------------------------
-          x1 = xnan
-          y1 = xnan
-          y3 = xnan
+          x1 = initval
+          y1 = initval
+          y3 = initval
           n = xsqy_tab(j)%filespec%nread(3)
           call base_read( filespec=xsqy_tab(j)%filespec%filename(3), &
                errmsg=errmsg, errflg=errflg, &
@@ -6115,7 +6114,7 @@
         logical, save :: is_initialized = .false.
 
         if (present(sq)) then
-           sq = xnan
+           sq = initval
         end if
 
         if( initialize ) then
@@ -6194,8 +6193,8 @@
       contains
 
         subroutine readit
-          x1 = xnan
-          y1 = xnan
+          x1 = initval
+          y1 = initval
           n = xsqy_tab(j)%filespec%nread(1)
           call base_read( filespec=xsqy_tab(j)%filespec%filename(1), &
                errmsg=errmsg, errflg=errflg, &
@@ -6206,13 +6205,13 @@
           call add_pnts_inter2(x1,y1,yg, kdata, n, &
                nw,wl,xsqy_tab(j)%equation,deltax,(/0._rk,0._rk/), errmsg, errflg)
 
-          xqy = xnan
-          qyNO_298 = xnan
-          qyNO_230 = xnan
-          qyNO_190 = xnan
-          qyNO2_298 = xnan
-          qyNO2_230 = xnan
-          qyNO2_190 = xnan
+          xqy = initval
+          qyNO_298 = initval
+          qyNO_230 = initval
+          qyNO_190 = initval
+          qyNO2_298 = initval
+          qyNO2_230 = initval
+          qyNO2_190 = initval
           n = xsqy_tab(j)%filespec%nread(2)
           call base_read( filespec=xsqy_tab(j)%filespec%filename(2), &
                errmsg=errmsg, errflg=errflg, &
@@ -6343,7 +6342,7 @@
         LOGICAL, save :: is_initialized = .false.
 
         if (present(sq)) then
-           sq = xnan
+           sq = initval
         end if
 
         if( initialize ) then
@@ -6534,7 +6533,7 @@
       real(rk)  sig
 
       if (present(sq)) then
-         sq = xnan
+         sq = initval
       end if
       
 !----------------------------------------------------
@@ -6581,8 +6580,8 @@
     contains
       
       subroutine readit
-        x1 = xnan
-        y1 = xnan
+        x1 = initval
+        y1 = initval
         n = xsqy_tab(j)%filespec%nread(1)
         CALL base_read( filespec=xsqy_tab(j)%filespec%filename(1), &
              errmsg=errmsg, errflg=errflg, &
@@ -6592,9 +6591,9 @@
         call add_pnts_inter2(x1,y1,yg, kdata, n, &
              nw,wl,xsqy_tab(j)%equation,deltax,(/0._rk,0._rk/), errmsg, errflg)
 
-        x1 = xnan
-        y1 = xnan
-        y2 = xnan
+        x1 = initval
+        y1 = initval
+        y2 = initval
 
         n = xsqy_tab(j)%filespec%nread(2)
         CALL base_read( filespec=xsqy_tab(j)%filespec%filename(2), &
@@ -6611,8 +6610,8 @@
            yg3(iw) = 0._rk
         enddo
 
-        x1 = xnan
-        y1 = xnan
+        x1 = initval
+        y1 = initval
         n = xsqy_tab(j)%filespec%nread(3)
         CALL base_read( filespec=xsqy_tab(j)%filespec%filename(3), &
              errmsg=errmsg, errflg=errflg, &
@@ -6688,7 +6687,7 @@
       real(rk) :: phi0, kq
 
       if (present(sq)) then
-         sq = xnan
+         sq = initval
       end if
       if( initialize ) then
          CALL readit
@@ -6748,8 +6747,8 @@
       contains
       
         subroutine readit
-          x1 = xnan
-          y1 = xnan
+          x1 = initval
+          y1 = initval
           n = xsqy_tab(j)%filespec%nread(1)
           call base_read( filespec=xsqy_tab(j)%filespec%filename(1), &
                errmsg=errmsg, errflg=errflg, &
@@ -6830,7 +6829,7 @@
       real(rk) ::  AA2, AA3, AA4, a2, b2, a3, b3, c3, a4, b4
 
       if (present(sq)) then
-         sq = xnan
+         sq = initval
       end if
       
 !---------------------------------------------
@@ -6955,8 +6954,8 @@
       contains
       
         subroutine readit
-          x1 = xnan
-          y1 = xnan
+          x1 = initval
+          y1 = initval
           n = xsqy_tab(j)%filespec%nread(1)
           call base_read( filespec=xsqy_tab(j)%filespec%filename(1), &
                errmsg=errmsg, errflg=errflg, &
@@ -7032,7 +7031,7 @@
       real(rk) ::  qy, sig
 
       if (present(sq)) then
-         sq = xnan
+         sq = initval
       end if
 
       if( initialize ) then
@@ -7063,9 +7062,9 @@
       contains
 
         subroutine readit
-          x1 = xnan
-          y1 = xnan
-          y2 = xnan
+          x1 = initval
+          y1 = initval
+          y2 = initval
           n = xsqy_tab(j)%filespec%nread(1)
           call base_read( filespec=xsqy_tab(j)%filespec%filename(1), &
                errmsg=errmsg, errflg=errflg, &
@@ -7148,7 +7147,7 @@
       LOGICAL, save :: is_initialized = .false.
 
       if (present(sq)) then
-         sq = xnan
+         sq = initval
       end if
 
       if( initialize ) then
@@ -7166,8 +7165,8 @@
     contains
       subroutine readit
 
-        x1 = xnan
-        y1 = xnan
+        x1 = initval
+        y1 = initval
         n = xsqy_tab(j)%filespec%nread(1)
         call base_read( filespec=xsqy_tab(j)%filespec%filename(1), &
              errmsg=errmsg, errflg=errflg, &
@@ -7180,8 +7179,8 @@
         call add_pnts_inter2(x1,y1,yg1, kdata, n, &
              nw,wl,xsqy_tab(j)%equation,deltax,(/0._rk,0._rk/), errmsg, errflg)
 
-        x2 = xnan
-        y2 = xnan
+        x2 = initval
+        y2 = initval
         n = xsqy_tab(j)%filespec%nread(2)
         call base_read( filespec=xsqy_tab(j)%filespec%filename(2), &
              errmsg=errmsg, errflg=errflg, &
@@ -7194,8 +7193,8 @@
         call add_pnts_inter2(x2,y2,yg2, kdata, n, &
              nw,wl,xsqy_tab(j)%equation,deltax,(/0._rk,0._rk/), errmsg, errflg)
 
-        x3 = xnan
-        y3 = xnan
+        x3 = initval
+        y3 = initval
         n = xsqy_tab(j)%filespec%nread(3)
         call base_read( filespec=xsqy_tab(j)%filespec%filename(3), &
              errmsg=errmsg, errflg=errflg, &
@@ -7329,7 +7328,7 @@
       integer :: chnl
       
       if (present(sq)) then
-         sq = xnan
+         sq = initval
       end if
 
       if( initialize ) then
@@ -7415,8 +7414,8 @@
       contains
 
         subroutine readit
-          x1 = xnan
-          y1 = xnan
+          x1 = initval
+          y1 = initval
 
           n = xsqy_tab(j)%filespec%nread(1)
           call base_read( filespec=xsqy_tab(j)%filespec%filename(1), &
@@ -7425,9 +7424,9 @@
                rd_cnt=n, &
                x=x1, y=y1 )
           
-          x2 = xnan
-          aa = xnan
-          bb = xnan
+          x2 = initval
+          aa = initval
+          bb = initval
           n = xsqy_tab(j)%filespec%nread(2)
           call base_read( filespec=xsqy_tab(j)%filespec%filename(2), &
                errmsg=errmsg, errflg=errflg, &
@@ -7577,7 +7576,7 @@
       n = xsqy_tab(j)%filespec%nread(1)
 
       if (present(sq)) then
-         sq = xnan
+         sq = initval
       end if
       if( initialize ) then
          CALL readit
@@ -7698,8 +7697,8 @@
     contains
 
       subroutine readit
-        x1 = xnan
-        y1 = xnan
+        x1 = initval
+        y1 = initval
         n = xsqy_tab(j)%filespec%nread(1)
         call base_read( filespec=xsqy_tab(j)%filespec%filename(1), &
              errmsg=errmsg, errflg=errflg, &
@@ -7756,10 +7755,10 @@
       real(rk), save :: xsq(kw,jdata)
 
       if (present(sq)) then
-         sq = xnan
+         sq = initval
       end if
       if( initialize ) then
-         xsq(:,j) = xnan
+         xsq(:,j) = initval
          CALL readit
          xsq(:nw-1,j) = xsqy_tab(j)%qyld*yg(:nw-1)
       else
@@ -7771,10 +7770,10 @@
       contains
 
       subroutine readit
-        x_max = xnan
-        x_min = xnan
-        x = xnan
-        y = xnan
+        x_max = initval
+        x_min = initval
+        x = initval
+        y = initval
         n = xsqy_tab(j)%filespec%nread(1)
         call base_read( filespec=xsqy_tab(j)%filespec%filename(1), &
              errmsg=errmsg, errflg=errflg, &
@@ -7826,7 +7825,7 @@
       logical, save :: is_initialized = .false.
       
       if (present(sq)) then
-         sq = xnan
+         sq = initval
       end if
 !-----------------------------------------------------------------------------
 !     ... Shortward of 174.65 the product is O2 + hv => O(3P) + O(1D)
