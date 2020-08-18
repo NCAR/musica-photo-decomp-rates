@@ -21,4 +21,6 @@ target_link_libraries(integration_test musica-photolib ${NETCDF_LIBS})
 
 add_test(NAME integration COMMAND integration_test)
 
+add_test(NAME compare_out COMMAND ${CMAKE_BINARY_DIR}/test/integration/data/compare_output.sh)
+
 ################################################################################
