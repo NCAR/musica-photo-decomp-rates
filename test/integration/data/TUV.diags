@@ -1,0 +1,845 @@
+ Photolysis diags
+  
+149 Total photorates
+  
+  2  O2 + hv -> O(1D) + O(3P)
+  3  O2 + hv -> O(3P) + O(3P)
+  4  O3 -> O2 + O(1D)
+  5  O3 -> O2 + O(3P)
+  6  O3 -> O2 + O(1D)
+  7  O3 -> O2 + O(3P)
+  8  NO2 -> NO + O(3P)
+  9  NO3 -> NO + O2
+ 10  NO3 -> NO2 + O(3P)
+ 11  NO3 -> NO + O2
+ 12  NO3 -> NO2 + O(3P)
+ 13  N2O5 -> NO3 + NO + O(3P)
+ 14  N2O5 -> NO3 + NO2
+ 15  H2O + hv -> H + OH
+ 16  H2O + hv -> H2 + O(1D)
+ 17  H2O + hv -> 2H + O(3P)
+ 18  HO2NO2 -> OH + NO3
+ 19  HO2NO2 -> HO2 + NO2
+ 20  CH4 + hv -> CH3O2 + H
+ 21  CH4 + hv -> H2 + Products
+ 22  CO2 + hv -> CO + O
+ 23  COF2 + hv  -> 2F
+ 24  COFCl + hv  -> Cl + F
+ 25  HBr + hv -> H + Br
+ 26  HF + hv  -> H + F
+ 27  SF6 + hv -> product
+ 28  GLYALD + hv -> 2HO2 + CO + CH2O
+ 29  HYAC + hv -> CH3CO3 + HO2 + CH2O
+ 30  MACR + hv -> 1.34HO2 + 0.66MCO3 + 1.34CH2O+ CH3CO3
+ 31  MACR + hv -> 0.66OH + 1.34CO
+ 32  H2SO4 + hv -> HSO3 + OH
+ 33  OCS + hv -> CO + S
+ 34  SO + hv -> S + O
+ 35  SO2 + hv -> SO + O
+ 36  SO3 + hv -> SO2 + O
+ 37  CH2Br2 + hv -> 2Br
+ 38  NO = hv => NOp + e
+ 39  HNO2 -> OH + NO
+ 40  HNO3 -> OH + NO2
+ 41  HNO4 -> HO2 + NO2
+ 42  H2O2 -> 2 OH
+ 43  CHBr3 -> Products
+ 44  CH3CHO + hv -> CH3O2 + CO + HO2
+ 45  CH3CHO -> CH3 + HCO
+ 46  CH3CHO -> CH4 + CO
+ 47  CH3CHO -> CH3CO + H
+ 48  C2H5CHO -> C2H5 + HCO
+ 49  CHOCHO -> HCO + HCO
+ 50  CHOCHO -> H2 + 2CO
+ 51  CHOCHO -> CH2O + CO
+ 52  CH3COCHO -> CH3CO + HCO
+ 53  MGLY + hv ->  CH3CO3  + CO + HO2
+ 54  CH3COCH3 -> CH3CO + CH3
+ 55  CH3COCH3 + hv -> CH3CO3 + CH3O2
+ 56  CH3OOH -> CH3O + OH
+ 57  CH3OOH + hv -> CH2O + H + OH
+ 58  Cl2O2 + hv -> Cl + ClOO
+ 59  CH3ONO2 -> CH3O + NO2
+ 60  PAN + hv -> Products
+ 61  CH3CO(OONO2) -> CH3CO(OO) + NO2
+ 62  CH3CO(OONO2) -> CH3CO(O) + NO3
+ 63  CCl2O -> Products
+ 64  CCl4 -> Products
+ 65  CClFO -> Products
+ 66  CF2O -> Products
+ 67  CF2ClCFCl2 (CFC-113) -> Products
+ 68  CF2ClCF2Cl (CFC-114) -> Products
+ 69  CF3CF2Cl (CFC-115) -> Products
+ 70  CCl3F (CFC-11) -> Products
+ 71  CCl2F2 (CFC-12) -> Products
+ 72  CH3Br -> Products
+ 73  CH3CCl3 -> Products
+ 74  CH3Cl -> Products
+ 75  ClOO -> Products
+ 76  CF3CHCl2 (HCFC-123) -> Products
+ 77  CF3CHFCl (HCFC-124) -> Products
+ 78  CH3CFCl2 (HCFC-141b) -> Products
+ 79  CH3CF2Cl (HCFC-142b) -> Products
+ 80  CF3CF2CHCl2 (HCFC-225ca) -> Products
+ 81  CF2ClCF2CHFCl (HCFC-225cb) -> Products
+ 82  CHClF2 (HCFC-22) -> Products
+ 83  HO2 -> OH + O
+ 84  CF2Br2 (Halon-1202) -> Products
+ 85  CF2BrCl (Halon-1211) -> Products
+ 86  CF3Br (Halon-1301) -> Products
+ 87  CF2BrCF2Br (Halon-2402) -> Products
+ 88  N2O -> N2 + O(1D)
+ 89  ClONO2 -> Cl + NO3
+ 90  ClONO2 -> ClO + NO2
+ 91  BrONO2 -> BrO + NO2
+ 92  BrONO2 -> Br + NO3
+ 93  Cl2 -> Cl + Cl
+ 94  HOCH2CHO -> CH2OH + HCO
+ 95  HOCH2CHO -> CH3OH + CO
+ 96  HOCH2CHO -> CH2CHO + OH
+ 97  CH3COCOCH3 -> Products
+ 98  CH3COCH=CH2 -> Products
+ 99  CH2=C(CH3)CHO -> Products
+100  CH3COCO(OH) -> Products
+101  CH3CH2ONO2 -> CH3CH2O + NO2
+102  CH3CHONO2CH3 -> CH3CHOCH3 + NO2
+103  CH2(OH)CH2(ONO2) -> CH2(OH)CH2(O.) + NO2
+104  CH3COCH2(ONO2) -> CH3COCH2(O.) + NO2
+105  C(CH3)3(ONO2) -> C(CH3)3(O.) + NO2
+106  ClOOCl -> Cl + ClOO
+107  CH2(OH)COCH3 -> CH3CO + CH2(OH)
+108  CH2(OH)COCH3 -> CH2(OH)CO + CH3
+109  HOBr -> OH + Br
+110  BrO -> Br + O
+111  Br2 -> Br + Br
+112  NO3-(aq) -> NO2(aq) + O-
+113  NO3-(aq) -> NO2-(aq) + O(3P)
+114  NO3-(aq) with qy=1
+115  CH3COCH2CH3 -> CH3CO + CH2CH3
+116  CH3CH2CO(OONO2) -> CH3CH2CO(OO) + NO2
+117  CH3CH2CO(OONO2) -> CH3CH2CO(O) + NO3
+118  HOCH2OOH -> HOCH2O. + OH
+119  CH2=CHCHO -> Products
+120  CH3CO(OOH) -> Products
+121  (CH3)2NNO -> Products
+122  ClO -> Cl + O(1D)
+123  ClO -> Cl + O(3P)
+124  ClNO2 -> Cl + NO2
+125  BrNO -> Br + NO
+126  BrNO2 -> Br + NO2
+127  BrONO -> Br + NO2
+128  BrONO -> BrO + NO
+129  HOCl -> HO + Cl
+130  NOCl -> NO + Cl
+131  OClO -> Products
+132  BrCl -> Br + Cl
+133  CH3(OONO2) -> CH3(OO) + NO2
+134  C(CH3)3(ONO) -> C(CH3)3(O) + NO
+135  ClONO -> Cl + NO2
+136  HCl -> H + Cl
+137  CH2O -> H + HCO
+138  CH2O -> H2 + CO
+139  CH3COOH -> CH3 + COOH
+140  CH3OCl -> CH3O + Cl
+141  CHCl3 -> Products
+142  C2H5ONO2 -> C2H5O + NO2
+143  n-C3H7ONO2 -> C3H7O + NO2
+144  1-C4H9ONO2 -> 1-C4H9O + NO2
+145  2-C4H9ONO2 -> 2-C4H9O + NO2
+146  perfluoro 1-iodopropane -> products
+147  I2 -> I + I
+148  IO -> I + O
+149  IOH -> I + OH
+  
+Wrf labels
+  
+  2  jo2_a
+  3  jo2_b
+  4  j_o3_a
+  5  j_o3_b
+  6  jo3_a
+  7  jo3_b
+  8  jno2
+  9  j_no3_b
+ 10  j_no3_a
+ 11  jno3_b
+ 12  jno3_a
+ 13  jn2o5_b
+ 14  jn2o5_a
+ 15  jh2o_a
+ 16  jh2o_b
+ 17  jh2o_c
+ 18  jho2no2_a
+ 19  jho2no2_b
+ 20  jch4_a
+ 21  jch4_b
+ 22  jco2
+ 23  jcof2
+ 24  jcofcl
+ 25  jhbr
+ 26  jhf
+ 27  jsf6
+ 28  jglyald
+ 29  jhyac
+ 30  jmacr_a
+ 31  jmacr_b
+ 32  jh2so4
+ 33  jocs
+ 34  jso
+ 35  jso2
+ 36  jso3
+ 37  jch2br2
+ 38  jno_i
+ 39  jhno2
+ 40  jhno3
+ 41  jhno4
+ 42  jh2o2
+ 43  jchbr3
+ 44  jch3cho
+ 45  j_ch3cho_a
+ 46  j_ch3cho_b
+ 47  j_ch3cho_c
+ 48  j_c2h5cho
+ 49  j_gly_a
+ 50  j_gly_b
+ 51  j_gly_c
+ 52  j_mgly
+ 53  jmgly
+ 54  j_ch3coch3
+ 55  jacet
+ 56  j_ch3ooh
+ 57  jch3ooh
+ 58  jcl2o2
+ 59  j_ch3ono2
+ 60  jpan
+ 61  j_pan_a
+ 62  j_pan_b
+ 63  j_ccl2o
+ 64  jccl4
+ 65  j_cclfo
+ 66  j_cf2o
+ 67  jcfc113
+ 68  jcfc114
+ 69  jcfc115
+ 70  jcfcl3
+ 71  jcf2cl2
+ 72  jch3br
+ 73  jch3ccl3
+ 74  jch3cl
+ 75  j_cloo
+ 76  j_cf3chcl2
+ 77  j_cf3chfcl
+ 78  jhcfc141b
+ 79  jhcfc142b
+ 80  j_cf3cf2chcl2
+ 81  j_cf2clcf2chfcl
+ 82  jhcfc22
+ 83  j_ho2
+ 84  j_cf2bf2
+ 85  jcf2clbr
+ 86  jcf3br
+ 87  jh2402
+ 88  jn2o
+ 89  jclono2_a
+ 90  jclono2_b
+ 91  jbrono2_b
+ 92  jbrono2_a
+ 93  jcl2
+ 94  j_glyald_a
+ 95  j_glyald_b
+ 96  j_glyald_c
+ 97  j_biacetyl
+ 98  jmvk
+ 99  j_macr
+100  j_ch3cocooh
+101  j_ch3ch2ono2
+102  j_ch3chono2ch3
+103  j_ch2ohch2ono2
+104  j_ch3coch2ono2
+105  j_bnit1
+106  j_cloocl
+107  j_hyac_a
+108  j_hyac_b
+109  jhobr
+110  jbro
+111  j_br2
+112  j_no3_aq_a
+113  j_no3_aq_b
+114  j_no3_aq_c
+115  j_mek
+116  j_ppn_a
+117  j_ppn_b
+118  j_hoch2ooh
+119  j_acrol
+120  j_ch3coooh
+121  j_amine
+122  j_clo_a
+123  jclo
+124  j_clno2
+125  j_brno
+126  j_brno2
+127  jbrono_b
+128  jbrono_a
+129  jhocl
+130  j_nocl
+131  joclo
+132  jbrcl
+133  j_ch3oono2
+134  j_bnit2
+135  j_clono
+136  jhcl
+137  jch2o_a
+138  jch2o_b
+139  j_ch3cooh
+140  j_ch3ocl
+141  j_chcl3
+142  j_c2h5ono2
+143  j_nc3h7ono2
+144  j_1c4h9ono2
+145  j_2c4h9ono2
+146  j_perfluoro
+147  j_i2
+148  j_io
+149  j_ioh
+  
+ 89 Photorate(s) with no p,temp dependence
+  
+  2  O2 + hv -> O(1D) + O(3P)
+  3  O2 + hv -> O(3P) + O(3P)
+ 15  H2O + hv -> H + OH
+ 16  H2O + hv -> H2 + O(1D)
+ 17  H2O + hv -> 2H + O(3P)
+ 20  CH4 + hv -> CH3O2 + H
+ 21  CH4 + hv -> H2 + Products
+ 22  CO2 + hv -> CO + O
+ 23  COF2 + hv  -> 2F
+ 24  COFCl + hv  -> Cl + F
+ 25  HBr + hv -> H + Br
+ 26  HF + hv  -> H + F
+ 27  SF6 + hv -> product
+ 28  GLYALD + hv -> 2HO2 + CO + CH2O
+ 29  HYAC + hv -> CH3CO3 + HO2 + CH2O
+ 30  MACR + hv -> 1.34HO2 + 0.66MCO3 + 1.34CH2O+ CH3CO3
+ 31  MACR + hv -> 0.66OH + 1.34CO
+ 32  H2SO4 + hv -> HSO3 + OH
+ 33  OCS + hv -> CO + S
+ 34  SO + hv -> S + O
+ 35  SO2 + hv -> SO + O
+ 36  SO3 + hv -> SO2 + O
+ 38  NO = hv => NOp + e
+ 39  HNO2 -> OH + NO
+ 41  HNO4 -> HO2 + NO2
+ 46  CH3CHO -> CH4 + CO
+ 47  CH3CHO -> CH3CO + H
+ 49  CHOCHO -> HCO + HCO
+ 50  CHOCHO -> H2 + 2CO
+ 51  CHOCHO -> CH2O + CO
+ 56  CH3OOH -> CH3O + OH
+ 57  CH3OOH + hv -> CH2O + H + OH
+ 58  Cl2O2 + hv -> Cl + ClOO
+ 63  CCl2O -> Products
+ 65  CClFO -> Products
+ 66  CF2O -> Products
+ 69  CF3CF2Cl (CFC-115) -> Products
+ 72  CH3Br -> Products
+ 75  ClOO -> Products
+ 78  CH3CFCl2 (HCFC-141b) -> Products
+ 80  CF3CF2CHCl2 (HCFC-225ca) -> Products
+ 81  CF2ClCF2CHFCl (HCFC-225cb) -> Products
+ 83  HO2 -> OH + O
+ 84  CF2Br2 (Halon-1202) -> Products
+ 85  CF2BrCl (Halon-1211) -> Products
+ 86  CF3Br (Halon-1301) -> Products
+ 87  CF2BrCF2Br (Halon-2402) -> Products
+ 91  BrONO2 -> BrO + NO2
+ 92  BrONO2 -> Br + NO3
+ 94  HOCH2CHO -> CH2OH + HCO
+ 95  HOCH2CHO -> CH3OH + CO
+ 96  HOCH2CHO -> CH2CHO + OH
+ 97  CH3COCOCH3 -> Products
+ 99  CH2=C(CH3)CHO -> Products
+100  CH3COCO(OH) -> Products
+103  CH2(OH)CH2(ONO2) -> CH2(OH)CH2(O.) + NO2
+104  CH3COCH2(ONO2) -> CH3COCH2(O.) + NO2
+105  C(CH3)3(ONO2) -> C(CH3)3(O.) + NO2
+106  ClOOCl -> Cl + ClOO
+107  CH2(OH)COCH3 -> CH3CO + CH2(OH)
+108  CH2(OH)COCH3 -> CH2(OH)CO + CH3
+109  HOBr -> OH + Br
+110  BrO -> Br + O
+111  Br2 -> Br + Br
+113  NO3-(aq) -> NO2-(aq) + O(3P)
+114  NO3-(aq) with qy=1
+118  HOCH2OOH -> HOCH2O. + OH
+120  CH3CO(OOH) -> Products
+121  (CH3)2NNO -> Products
+124  ClNO2 -> Cl + NO2
+125  BrNO -> Br + NO
+126  BrNO2 -> Br + NO2
+127  BrONO -> Br + NO2
+128  BrONO -> BrO + NO
+129  HOCl -> HO + Cl
+132  BrCl -> Br + Cl
+133  CH3(OONO2) -> CH3(OO) + NO2
+134  C(CH3)3(ONO) -> C(CH3)3(O) + NO
+135  ClONO -> Cl + NO2
+136  HCl -> H + Cl
+139  CH3COOH -> CH3 + COOH
+140  CH3OCl -> CH3O + Cl
+143  n-C3H7ONO2 -> C3H7O + NO2
+144  1-C4H9ONO2 -> 1-C4H9O + NO2
+145  2-C4H9ONO2 -> 2-C4H9O + NO2
+146  perfluoro 1-iodopropane -> products
+147  I2 -> I + I
+148  IO -> I + O
+149  IOH -> I + OH
+  
+ 49 Photorate(s) with temp dependence
+  
+  4  O3 -> O2 + O(1D)
+  5  O3 -> O2 + O(3P)
+  6  O3 -> O2 + O(1D)
+  7  O3 -> O2 + O(3P)
+  8  NO2 -> NO + O(3P)
+  9  NO3 -> NO + O2
+ 10  NO3 -> NO2 + O(3P)
+ 11  NO3 -> NO + O2
+ 12  NO3 -> NO2 + O(3P)
+ 13  N2O5 -> NO3 + NO + O(3P)
+ 14  N2O5 -> NO3 + NO2
+ 18  HO2NO2 -> OH + NO3
+ 19  HO2NO2 -> HO2 + NO2
+ 37  CH2Br2 + hv -> 2Br
+ 40  HNO3 -> OH + NO2
+ 42  H2O2 -> 2 OH
+ 43  CHBr3 -> Products
+ 55  CH3COCH3 + hv -> CH3CO3 + CH3O2
+ 59  CH3ONO2 -> CH3O + NO2
+ 60  PAN + hv -> Products
+ 61  CH3CO(OONO2) -> CH3CO(OO) + NO2
+ 62  CH3CO(OONO2) -> CH3CO(O) + NO3
+ 64  CCl4 -> Products
+ 67  CF2ClCFCl2 (CFC-113) -> Products
+ 68  CF2ClCF2Cl (CFC-114) -> Products
+ 70  CCl3F (CFC-11) -> Products
+ 71  CCl2F2 (CFC-12) -> Products
+ 73  CH3CCl3 -> Products
+ 74  CH3Cl -> Products
+ 76  CF3CHCl2 (HCFC-123) -> Products
+ 77  CF3CHFCl (HCFC-124) -> Products
+ 79  CH3CF2Cl (HCFC-142b) -> Products
+ 82  CHClF2 (HCFC-22) -> Products
+ 88  N2O -> N2 + O(1D)
+ 89  ClONO2 -> Cl + NO3
+ 90  ClONO2 -> ClO + NO2
+ 93  Cl2 -> Cl + Cl
+101  CH3CH2ONO2 -> CH3CH2O + NO2
+102  CH3CHONO2CH3 -> CH3CHOCH3 + NO2
+112  NO3-(aq) -> NO2(aq) + O-
+116  CH3CH2CO(OONO2) -> CH3CH2CO(OO) + NO2
+117  CH3CH2CO(OONO2) -> CH3CH2CO(O) + NO3
+122  ClO -> Cl + O(1D)
+123  ClO -> Cl + O(3P)
+130  NOCl -> NO + Cl
+131  OClO -> Products
+137  CH2O -> H + HCO
+141  CHCl3 -> Products
+142  C2H5ONO2 -> C2H5O + NO2
+  
+  8 Photorate(s) with press dependence
+  
+ 44  CH3CHO + hv -> CH3O2 + CO + HO2
+ 45  CH3CHO -> CH3 + HCO
+ 48  C2H5CHO -> C2H5 + HCO
+ 52  CH3COCHO -> CH3CO + HCO
+ 53  MGLY + hv ->  CH3CO3  + CO + HO2
+ 98  CH3COCH=CH2 -> Products
+115  CH3COCH2CH3 -> CH3CO + CH2CH3
+119  CH2=CHCHO -> Products
+  
+  2 Photorate(s) with temp,press dependence
+  
+ 54  CH3COCH3 -> CH3CO + CH3
+138  CH2O -> H2 + CO
+  
+ 21 Photorate(s) with second channel
+  
+  3  O2 + hv -> O(3P) + O(3P)
+  5  O3 -> O2 + O(3P)
+  7  O3 -> O2 + O(3P)
+ 10  NO3 -> NO2 + O(3P)
+ 12  NO3 -> NO2 + O(3P)
+ 14  N2O5 -> NO3 + NO2
+ 16  H2O + hv -> H2 + O(1D)
+ 19  HO2NO2 -> HO2 + NO2
+ 21  CH4 + hv -> H2 + Products
+ 46  CH3CHO -> CH4 + CO
+ 50  CHOCHO -> H2 + 2CO
+ 62  CH3CO(OONO2) -> CH3CO(O) + NO3
+ 90  ClONO2 -> ClO + NO2
+ 92  BrONO2 -> Br + NO3
+ 95  HOCH2CHO -> CH3OH + CO
+108  CH2(OH)COCH3 -> CH2(OH)CO + CH3
+113  NO3-(aq) -> NO2-(aq) + O(3P)
+117  CH3CH2CO(OONO2) -> CH3CH2CO(O) + NO3
+123  ClO -> Cl + O(3P)
+128  BrONO -> BrO + NO
+138  CH2O -> H2 + CO
+  
+  5 Photorate(s) with third channel
+  
+ 17  H2O + hv -> 2H + O(3P)
+ 47  CH3CHO -> CH3CO + H
+ 51  CHOCHO -> CH2O + CO
+ 96  HOCH2CHO -> CH2CHO + OH
+114  NO3-(aq) with qy=1
+  
+ 20 Photorate(s) with multiple input files
+  
+  6  O3 -> O2 + O(1D)
+  7  O3 -> O2 + O(3P)
+  9  NO3 -> NO + O2
+ 10  NO3 -> NO2 + O(3P)
+ 11  NO3 -> NO + O2
+ 12  NO3 -> NO2 + O(3P)
+ 15  H2O + hv -> H + OH
+ 16  H2O + hv -> H2 + O(1D)
+ 17  H2O + hv -> 2H + O(3P)
+ 18  HO2NO2 -> OH + NO3
+ 19  HO2NO2 -> HO2 + NO2
+ 42  H2O2 -> 2 OH
+ 44  CH3CHO + hv -> CH3O2 + CO + HO2
+ 45  CH3CHO -> CH3 + HCO
+ 48  C2H5CHO -> C2H5 + HCO
+ 49  CHOCHO -> HCO + HCO
+ 55  CH3COCH3 + hv -> CH3CO3 + CH3O2
+130  NOCl -> NO + Cl
+131  OClO -> Products
+137  CH2O -> H + HCO
+  
+ Photorate(s) with skip == -1
+  
+ 42  H2O2 -> 2 OH
+ 63  CCl2O -> Products
+ 65  CClFO -> Products
+ 67  CF2ClCFCl2 (CFC-113) -> Products
+ 68  CF2ClCF2Cl (CFC-114) -> Products
+ 69  CF3CF2Cl (CFC-115) -> Products
+ 70  CCl3F (CFC-11) -> Products
+ 71  CCl2F2 (CFC-12) -> Products
+ 72  CH3Br -> Products
+ 73  CH3CCl3 -> Products
+ 74  CH3Cl -> Products
+ 75  ClOO -> Products
+ 78  CH3CFCl2 (HCFC-141b) -> Products
+ 80  CF3CF2CHCl2 (HCFC-225ca) -> Products
+ 81  CF2ClCF2CHFCl (HCFC-225cb) -> Products
+ 82  CHClF2 (HCFC-22) -> Products
+ 84  CF2Br2 (Halon-1202) -> Products
+ 85  CF2BrCl (Halon-1211) -> Products
+ 86  CF3Br (Halon-1301) -> Products
+ 87  CF2BrCF2Br (Halon-2402) -> Products
+  
+ Photorate(s) with skip >= 0
+  
+  6  O3 -> O2 + O(1D)
+  6  O3 -> O2 + O(1D)
+  6  O3 -> O2 + O(1D)
+  7  O3 -> O2 + O(3P)
+  7  O3 -> O2 + O(3P)
+  7  O3 -> O2 + O(3P)
+  8  NO2 -> NO + O(3P)
+  9  NO3 -> NO + O2
+  9  NO3 -> NO + O2
+ 10  NO3 -> NO2 + O(3P)
+ 10  NO3 -> NO2 + O(3P)
+ 11  NO3 -> NO + O2
+ 11  NO3 -> NO + O2
+ 12  NO3 -> NO2 + O(3P)
+ 12  NO3 -> NO2 + O(3P)
+ 13  N2O5 -> NO3 + NO + O(3P)
+ 14  N2O5 -> NO3 + NO2
+ 15  H2O + hv -> H + OH
+ 15  H2O + hv -> H + OH
+ 15  H2O + hv -> H + OH
+ 16  H2O + hv -> H2 + O(1D)
+ 16  H2O + hv -> H2 + O(1D)
+ 16  H2O + hv -> H2 + O(1D)
+ 17  H2O + hv -> 2H + O(3P)
+ 17  H2O + hv -> 2H + O(3P)
+ 17  H2O + hv -> 2H + O(3P)
+ 18  HO2NO2 -> OH + NO3
+ 18  HO2NO2 -> OH + NO3
+ 19  HO2NO2 -> HO2 + NO2
+ 19  HO2NO2 -> HO2 + NO2
+ 20  CH4 + hv -> CH3O2 + H
+ 21  CH4 + hv -> H2 + Products
+ 22  CO2 + hv -> CO + O
+ 23  COF2 + hv  -> 2F
+ 24  COFCl + hv  -> Cl + F
+ 25  HBr + hv -> H + Br
+ 26  HF + hv  -> H + F
+ 27  SF6 + hv -> product
+ 28  GLYALD + hv -> 2HO2 + CO + CH2O
+ 29  HYAC + hv -> CH3CO3 + HO2 + CH2O
+ 30  MACR + hv -> 1.34HO2 + 0.66MCO3 + 1.34CH2O+ CH3CO3
+ 31  MACR + hv -> 0.66OH + 1.34CO
+ 32  H2SO4 + hv -> HSO3 + OH
+ 33  OCS + hv -> CO + S
+ 34  SO + hv -> S + O
+ 35  SO2 + hv -> SO + O
+ 36  SO3 + hv -> SO2 + O
+ 37  CH2Br2 + hv -> 2Br
+ 39  HNO2 -> OH + NO
+ 40  HNO3 -> OH + NO2
+ 41  HNO4 -> HO2 + NO2
+ 42  H2O2 -> 2 OH
+ 43  CHBr3 -> Products
+ 44  CH3CHO + hv -> CH3O2 + CO + HO2
+ 44  CH3CHO + hv -> CH3O2 + CO + HO2
+ 44  CH3CHO + hv -> CH3O2 + CO + HO2
+ 45  CH3CHO -> CH3 + HCO
+ 45  CH3CHO -> CH3 + HCO
+ 48  C2H5CHO -> C2H5 + HCO
+ 48  C2H5CHO -> C2H5 + HCO
+ 49  CHOCHO -> HCO + HCO
+ 49  CHOCHO -> HCO + HCO
+ 52  CH3COCHO -> CH3CO + HCO
+ 53  MGLY + hv ->  CH3CO3  + CO + HO2
+ 54  CH3COCH3 -> CH3CO + CH3
+ 55  CH3COCH3 + hv -> CH3CO3 + CH3O2
+ 55  CH3COCH3 + hv -> CH3CO3 + CH3O2
+ 56  CH3OOH -> CH3O + OH
+ 57  CH3OOH + hv -> CH2O + H + OH
+ 58  Cl2O2 + hv -> Cl + ClOO
+ 59  CH3ONO2 -> CH3O + NO2
+ 60  PAN + hv -> Products
+ 61  CH3CO(OONO2) -> CH3CO(OO) + NO2
+ 64  CCl4 -> Products
+ 66  CF2O -> Products
+ 83  HO2 -> OH + O
+ 89  ClONO2 -> Cl + NO3
+ 91  BrONO2 -> BrO + NO2
+ 94  HOCH2CHO -> CH2OH + HCO
+ 97  CH3COCOCH3 -> Products
+ 98  CH3COCH=CH2 -> Products
+ 99  CH2=C(CH3)CHO -> Products
+100  CH3COCO(OH) -> Products
+101  CH3CH2ONO2 -> CH3CH2O + NO2
+102  CH3CHONO2CH3 -> CH3CHOCH3 + NO2
+106  ClOOCl -> Cl + ClOO
+107  CH2(OH)COCH3 -> CH3CO + CH2(OH)
+111  Br2 -> Br + Br
+112  NO3-(aq) -> NO2(aq) + O-
+115  CH3COCH2CH3 -> CH3CO + CH2CH3
+116  CH3CH2CO(OONO2) -> CH3CH2CO(OO) + NO2
+118  HOCH2OOH -> HOCH2O. + OH
+119  CH2=CHCHO -> Products
+120  CH3CO(OOH) -> Products
+121  (CH3)2NNO -> Products
+124  ClNO2 -> Cl + NO2
+125  BrNO -> Br + NO
+126  BrNO2 -> Br + NO2
+127  BrONO -> Br + NO2
+129  HOCl -> HO + Cl
+130  NOCl -> NO + Cl
+130  NOCl -> NO + Cl
+131  OClO -> Products
+131  OClO -> Products
+131  OClO -> Products
+132  BrCl -> Br + Cl
+133  CH3(OONO2) -> CH3(OO) + NO2
+134  C(CH3)3(ONO) -> C(CH3)3(O) + NO
+135  ClONO -> Cl + NO2
+136  HCl -> H + Cl
+137  CH2O -> H + HCO
+137  CH2O -> H + HCO
+139  CH3COOH -> CH3 + COOH
+140  CH3OCl -> CH3O + Cl
+141  CHCl3 -> Products
+142  C2H5ONO2 -> C2H5O + NO2
+143  n-C3H7ONO2 -> C3H7O + NO2
+144  1-C4H9ONO2 -> 1-C4H9O + NO2
+145  2-C4H9ONO2 -> 2-C4H9O + NO2
+146  perfluoro 1-iodopropane -> products
+147  I2 -> I + I
+148  IO -> I + O
+149  IOH -> I + OH
+  
+ Photorate(s) with xfac /= 1.e-20
+  
+  9  NO3 -> NO + O2  1.0000000E-03
+ 10  NO3 -> NO2 + O(3P)  1.0000000E-03
+ 11  NO3 -> NO + O2  1.0000000E-03
+ 12  NO3 -> NO2 + O(3P)  1.0000000E-03
+ 15  H2O + hv -> H + OH   1.000000    
+ 16  H2O + hv -> H2 + O(1D)   1.000000    
+ 17  H2O + hv -> 2H + O(3P)   1.000000    
+ 20  CH4 + hv -> CH3O2 + H   1.000000    
+ 21  CH4 + hv -> H2 + Products   1.000000    
+ 22  CO2 + hv -> CO + O   1.000000    
+ 23  COF2 + hv  -> 2F   1.000000    
+ 24  COFCl + hv  -> Cl + F   1.000000    
+ 25  HBr + hv -> H + Br   1.000000    
+ 26  HF + hv  -> H + F   1.000000    
+ 27  SF6 + hv -> product   1.000000    
+ 28  GLYALD + hv -> 2HO2 + CO + CH2O   1.000000    
+ 29  HYAC + hv -> CH3CO3 + HO2 + CH2O   1.000000    
+ 30  MACR + hv -> 1.34HO2 + 0.66MCO3 + 1.34CH2O+ CH3CO3   1.000000    
+ 31  MACR + hv -> 0.66OH + 1.34CO   1.000000    
+ 57  CH3OOH + hv -> CH2O + H + OH   1.000000    
+ 58  Cl2O2 + hv -> Cl + ClOO   1.000000    
+111  Br2 -> Br + Br   1.000000    
+121  (CH3)2NNO -> Products  1.0000000E-19
+125  BrNO -> Br + NO   1.000000    
+126  BrNO2 -> Br + NO2   1.000000    
+129  HOCl -> HO + Cl   1.000000    
+132  BrCl -> Br + Cl   1.000000    
+133  CH3(OONO2) -> CH3(OO) + NO2   1.000000    
+134  C(CH3)3(ONO) -> C(CH3)3(O) + NO   1.000000    
+  
+ Filenames
+  
+  6  ../../inputs/XSQY/XS_O3_Ackerman_1971.txt      9     56
+  6  ../../inputs/XSQY/XS_O3_218_JPL06.txt     28     65
+  6  ../../inputs/XSQY/XS_O3_298_JPL06.txt     39    168
+  7  ../../inputs/XSQY/XS_O3_Ackerman_1971.txt      9     56
+  7  ../../inputs/XSQY/XS_O3_218_JPL06.txt     28     65
+  7  ../../inputs/XSQY/XS_O3_298_JPL06.txt     39    168
+  8  ../../inputs/DATAJ1/YLD/NO2_jpl11.yld      2     25
+  9  ../../inputs/DATAJ1/ABS/NO3_jpl11.abs      6    289
+  9  ../../inputs/DATAJ1/YLD/NO3_jpl2011.qy      5     56
+ 10  ../../inputs/DATAJ1/ABS/NO3_jpl11.abs      6    289
+ 10  ../../inputs/DATAJ1/YLD/NO3_jpl2011.qy      5     56
+ 11  ../../inputs/XSQY/XS_NO3_JPL06.txt     26    289
+ 11  ../../inputs/XSQY/QY_NO3_JPL06.txt     23     56
+ 12  ../../inputs/XSQY/XS_NO3_JPL06.txt     26    289
+ 12  ../../inputs/XSQY/QY_NO3_JPL06.txt     23     56
+ 13  ../../inputs/XSQY/XS_N2O5_JPL06.txt     41    103
+ 14  ../../inputs/XSQY/XS_N2O5_JPL06.txt     41    103
+ 15  ../../inputs/XSQY/XS_H2O_JPL06.txt     28      8
+ 15  ../../inputs/XSQY/XS_H2O_cantrell_1996.txt     12     11
+ 15  ../../inputs/XSQY/XS_H2O_yoshino_1996.txt     23   6783
+ 16  ../../inputs/XSQY/XS_H2O_JPL06.txt     28      8
+ 16  ../../inputs/XSQY/XS_H2O_cantrell_1996.txt     12     11
+ 16  ../../inputs/XSQY/XS_H2O_yoshino_1996.txt     23   6783
+ 17  ../../inputs/XSQY/XS_H2O_JPL06.txt     28      8
+ 17  ../../inputs/XSQY/XS_H2O_cantrell_1996.txt     12     11
+ 17  ../../inputs/XSQY/XS_H2O_yoshino_1996.txt     23   6783
+ 18  ../../inputs/XSQY/XS_HO2NO2_JPL06.txt     30     54
+ 18  ../../inputs/XSQY/XS_HO2NO2_JPL06.txt     86     36
+ 19  ../../inputs/XSQY/XS_HO2NO2_JPL06.txt     30     54
+ 19  ../../inputs/XSQY/XS_HO2NO2_JPL06.txt     86     36
+ 20  ../../inputs/XSQY/XS_CH4.txt     22     39
+ 21  ../../inputs/XSQY/XS_CH4.txt     22     39
+ 22  ../../inputs/XSQY/XS_CO2.txt     20     55
+ 23  ../../inputs/XSQY/XS_COF2_JPL10.txt     31     21
+ 24  ../../inputs/XSQY/XS_COFCL_JPL10.txt     32     32
+ 25  ../../inputs/XSQY/XS_HBR_JPL06.txt     44     40
+ 26  ../../inputs/XSQY/XS_HF.txt     14     39
+ 27  ../../inputs/XSQY/XS_SF6.txt     14     14
+ 28  ../../inputs/XSQY/XS_GLYALD.txt     15    131
+ 29  ../../inputs/XSQY/XS_HYAC.txt      8    101
+ 30  ../../inputs/XSQY/XS_MACR_JPL06.txt     20    146
+ 31  ../../inputs/XSQY/XS_MACR_JPL06.txt     20    146
+ 32  ../../inputs/XSQY/XS_H2SO4_mills.txt     13    125
+ 33  ../../inputs/XSQY/XS_OCS_mills.txt     13    125
+ 34  ../../inputs/XSQY/XS_SO_mills.txt     13    125
+ 35  ../../inputs/XSQY/XS_SO2_mills.txt     13    125
+ 36  ../../inputs/XSQY/XS_SO3_mills.txt     13    125
+ 37  ../../inputs/XSQY/XS_CH2BR2_JPL06.txt     53     34
+ 39  ../../inputs/DATAJ1/ABS/HONO_jpl11.abs      3    192
+ 40  ../../inputs/DATAJ1/ABS/HNO3_burk.abs      6     83
+ 41  ../../inputs/DATAJ1/ABS/HNO4_jpl11.abs      2     54
+ 42  ../../inputs/DATAJ1/ABS/H2O2_jpl94.abs     -1      0
+ 42  ../../inputs/DATAJ1/ABS/H2O2_Kahan.abs      0    494
+ 43  ../../inputs/DATAJ1/ABS/CHBr3.jpl97      6     87
+ 44  ../../inputs/XSQY/XS_CH3CHO_JPL06.txt     31    101
+ 44  ../../inputs/XSQY/QY_CH3CHO_iup.yld.txt      4     12
+ 44  ../../inputs/XSQY/QY_CH3CHO_press.yld.txt      4      5
+ 45  ../../inputs/DATAJ1/CH3CHO/CH3CHO_jpl11.abs      2    101
+ 45  ../../inputs/DATAJ1/CH3CHO/CH3CHO_uip.yld      4     12
+ 48  ../../inputs/DATAJ1/C2H5CHO/C2H5CHO_iup.abs      4    106
+ 48  ../../inputs/DATAJ1/C2H5CHO/C2H5CHO_iup.yld      4      5
+ 49  ../../inputs/DATAJ1/CHOCHO/glyoxal_jpl11.abs      2    277
+ 49  ../../inputs/DATAJ1/CHOCHO/glyoxal_jpl11.qy      3     40
+ 52  ../../inputs/DATAJ1/CH3COCHO/CH3COCHO_jpl11.abs      2    294
+ 53  ../../inputs/XSQY/XS_CH3COCHO_ncar.txt      0    271
+ 54  ../../inputs/DATAJ1/CH3COCH3/CH3COCH3_jpl11.abs      5    135
+ 55  ../../inputs/XSQY/XS_ACETONE_JPL06.txt     35    135
+ 55  ../../inputs/XSQY/XS_ACETONE_TD_JPL06.txt     34    135
+ 56  ../../inputs/DATAJ1/CH3OOH/CH3OOH_jpl11.abs      2     40
+ 57  ../../inputs/XSQY/XS_CH3OOH_JPL06.txt     20     32
+ 58  ../../inputs/XSQY/XS_CL2O2_JPL10_500nm.txt     32    521
+ 59  ../../inputs/DATAJ1/RONO2/CH3ONO2_jpl11.abs      2     65
+ 60  ../../inputs/XSQY/XS_PAN_JPL06.txt     20     78
+ 61  ../../inputs/DATAJ1/RONO2/PAN_talukdar.abs     14     78
+ 63  ../../inputs/DATAJ1/ABS/CCl2O_jpl94.abs     -1      0
+ 64  ../../inputs/DATAJ1/ABS/CCl4_jpl11.abs      5     44
+ 65  ../../inputs/DATAJ1/ABS/CClFO_jpl94.abs     -1      0
+ 66  ../../inputs/DATAJ1/ABS/CF2O_jpl11.abs      5     21
+ 67  ../../inputs/DATAJ1/ABS/CFC-113_jpl94.abs     -1      0
+ 68  ../../inputs/DATAJ1/ABS/CFC-114_jpl94.abs     -1      0
+ 69  ../../inputs/DATAJ1/ABS/CFC-115_jpl94.abs     -1      0
+ 70  ../../inputs/DATAJ1/ABS/CFC-11_jpl94.abs     -1      0
+ 71  ../../inputs/DATAJ1/ABS/CFC-12_jpl94.abs     -1      0
+ 72  ../../inputs/DATAJ1/ABS/CH3Br_jpl94.abs     -1      0
+ 73  ../../inputs/DATAJ1/ABS/CH3CCl3_jpl94.abs     -1      0
+ 74  ../../inputs/DATAJ1/ABS/CH3Cl_jpl94.abs     -1      0
+ 75  ../../inputs/DATAJ1/ABS/ClOO_jpl94.abs     -1      0
+ 78  ../../inputs/DATAJ1/ABS/HCFC-141b_jpl94.abs     -1      0
+ 80  ../../inputs/DATAJ1/ABS/HCFC-225ca_jpl94.abs     -1      0
+ 81  ../../inputs/DATAJ1/ABS/HCFC-225cb_jpl94.abs     -1      0
+ 82  ../../inputs/DATAJ1/ABS/HCFC-22_jpl94.abs     -1      0
+ 83  ../../inputs/DATAJ1/ABS/HO2_jpl11.abs     10     15
+ 84  ../../inputs/DATAJ1/ABS/Halon-1202_jpl97.abs     -1      0
+ 85  ../../inputs/DATAJ1/ABS/Halon-1211_jpl97.abs     -1      0
+ 86  ../../inputs/DATAJ1/ABS/Halon-1301_jpl97.abs     -1      0
+ 87  ../../inputs/DATAJ1/ABS/Halon-2402_jpl97.abs     -1      0
+ 89  ../../inputs/DATAJ1/ABS/ClONO2_jpl97.abs      2    119
+ 91  ../../inputs/DATAJ1/ABS/BrONO2_jpl03.abs     13     61
+ 94  ../../inputs/DATAJ1/CH2OHCHO/glycolaldehyde_jpl11.abs      2     63
+ 97  ../../inputs/DATAJ1/CH3COCOCH3/biacetyl_horowitz.abs      8    287
+ 98  ../../inputs/DATAJ1/ABS/MVK_jpl11.abs      2    146
+ 99  ../../inputs/DATAJ1/ABS/Methacrolein_jpl11.abs      7    146
+100  ../../inputs/DATAJ1/CH3COCOOH/pyruvic_jpl11.abs      2    139
+101  ../../inputs/DATAJ1/RONO2/RONO2_talukdar.abs     10     63
+102  ../../inputs/DATAJ1/RONO2/RONO2_talukdar.abs     10     63
+106  ../../inputs/DATAJ1/ABS/ClOOCl_jpl11.abs      3    111
+107  ../../inputs/DATAJ1/ABS/Hydroxyacetone_jpl11.abs      2     96
+111  ../../inputs/DATAJ1/ABS/Br2.abs      6     29
+112  ../../inputs/DATAJ1/ABS/NO3-_CA03.abs      7     43
+115  ../../inputs/DATAJ1/ABS/Martinez.abs      4     96
+116  ../../inputs/DATAJ1/ABS/PPN_Harwood.txt     10     66
+118  ../../inputs/DATAJ1/ABS/HOCH2OOH_jpl11.abs      3     32
+119  ../../inputs/DATAJ1/ABS/Acrolein.txt      6     55
+120  ../../inputs/DATAJ1/ABS/Peracetic_acid.txt      6     66
+121  ../../inputs/DATAJ1/ABS/dmna.abs      5    132
+124  ../../inputs/DATAJ1/ABS/ClNO2.abs      2     26
+125  ../../inputs/DATAJ1/ABS/BrNO.abs      3     27
+126  ../../inputs/DATAJ1/ABS/BrNO2.abs      6     54
+127  ../../inputs/DATAJ1/ABS/BrONO.abs      8     32
+129  ../../inputs/DATAJ1/ABS/HOCl.abs      7    111
+130  ../../inputs/DATAJ1/ABS/NOCl.abs      7     80
+130  ../../inputs/DATAJ1/ABS/NOCl.abs     88     61
+131  ../../inputs/DATAJ1/ABS/OClO.abs      6   1068
+131  ../../inputs/DATAJ1/ABS/OClO.abs   1075   1067
+131  ../../inputs/DATAJ1/ABS/OClO.abs   2142   1068
+132  ../../inputs/DATAJ1/ABS/BrCl.abs      9     81
+133  ../../inputs/DATAJ1/ABS/CH3OONO2.abs      9     26
+134  ../../inputs/DATAJ1/ABS/t-butyl-nitrite.abs      4     96
+135  ../../inputs/DATAJ1/ABS/ClONO_jpl11.abs      3     34
+136  ../../inputs/DATAJ1/ABS/HCl_jpl11.abs      3     31
+137  ../../inputs/DATAJ1/CH2O/CH2O_jpl11.abs      4    150
+137  ../../inputs/DATAJ1/CH2O/CH2O_jpl11.yld      4    112
+139  ../../inputs/DATAJ1/ABS/CH3COOH_jpl11.abs      2     18
+140  ../../inputs/DATAJ1/ABS/CH3OCl_jpl11.abs      3     83
+141  ../../inputs/DATAJ1/ABS/CHCl3_jpl11.abs      3     39
+142  ../../inputs/DATAJ1/RONO2/C2H5ONO2_iup2006.abs      4     32
+143  ../../inputs/DATAJ1/RONO2/nC3H7ONO2_iup2006.abs      3     32
+144  ../../inputs/DATAJ1/RONO2/1C4H9ONO2_iup2006.abs      3     32
+145  ../../inputs/DATAJ1/RONO2/2C4H9ONO2_iup2006.abs      3     15
+146  ../../inputs/DATAJ1/ABS/PF-n-iodopropane.abs      2     16
+147  ../../inputs/DATAJ1/YLD/I2.qy      4     12
+148  ../../inputs/DATAJ1/ABS/IO_jpl11.abs      2    133
+149  ../../inputs/DATAJ1/ABS/IOH_jpl11.abs      2    101
