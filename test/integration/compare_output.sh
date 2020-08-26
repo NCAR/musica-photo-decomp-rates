@@ -7,7 +7,7 @@ set -v
 
 pwd
 
-exec_str="ctest3 -R integration"
+exec_str="../../integration_test"
 
 if ! $exec_str; then
   echo "integration run FAILED"

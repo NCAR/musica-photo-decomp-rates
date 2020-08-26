@@ -11,7 +11,7 @@ program test
 
   integer :: errflg
   character(len=444) :: errmsg
-  character(len=*), parameter :: nml_file = '/terminator-data1/home/fvitt/photodev/no-atmos-test/test/integration/data/test_nml'
+  character(len=*), parameter :: nml_file = 'empty_atmos/data/test_nml'
 
   integer, parameter :: nlevels = 20
 
