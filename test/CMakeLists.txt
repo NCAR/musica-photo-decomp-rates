@@ -1,4 +1,10 @@
 ################################################################################
+# Copy needed data
+
+add_custom_target(copy_test_data ALL ${CMAKE_COMMAND} -E copy_directory
+  ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_BINARY_DIR}/test)
+
+################################################################################
 # macro to link the photo rate library and add the test to the suite
 
 macro(add_unit_test test_name)

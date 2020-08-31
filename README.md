@@ -1,6 +1,7 @@
 # musica-photo-decomp-rates
 Formerly known as TUV in MICM
 
+[![License](https://img.shields.io/github/license/NCAR/musica-photo-decomp-rates.svg)](https://github.com/NCAR/music-box/blob/master/LICENSE) [![Build Status](https://travis-ci.com/NCAR/musica-photo-decomp-rates.svg?branch=master)](https://travis-ci.com/NCAR/music-box)
 
 To build the library and tests:
 
