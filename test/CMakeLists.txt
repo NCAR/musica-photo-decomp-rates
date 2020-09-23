@@ -24,7 +24,7 @@ add_subdirectory(integration)
 add_executable(share_numer share/numer_test.F90)
 add_unit_test(share_numer)
 
-add_executable(empty_atmos empty_atmos/test.F90)
-add_unit_test(empty_atmos)
+#add_executable(empty_atmos empty_atmos/test.F90)
+#add_unit_test(empty_atmos)
 
 ################################################################################

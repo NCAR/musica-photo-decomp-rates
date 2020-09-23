@@ -291,14 +291,14 @@ program driver
   end if
 
   write(*,*) " Env conds file: "//trim(env_conds_file)
-  write(*,*) " Env conds lon : ",env_conds_lon
-  write(*,*) " Env conds lat : ",env_conds_lat
-  write(*,*) ' zen angle: ',zenith
+  write(*,'(1x,a,f12.6)') " Env conds lon : ",env_conds_lon
+  write(*,'(1x,a,f12.6)') " Env conds lat : ",env_conds_lat
+  write(*,'(1x,a,f12.6)') ' zen angle: ',zenith
 
   write(10,*) " Env conds file: "//trim(env_conds_file)
-  write(10,*) " Env conds lon : ",env_conds_lon
-  write(10,*) " Env conds lat : ",env_conds_lat
-  write(10,*) ' zen angle: ',zenith
+  write(10,'(1x,a,f12.6)') " Env conds lon : ",env_conds_lon
+  write(10,'(1x,a,f12.6)') " Env conds lat : ",env_conds_lat
+  write(10,'(1x,a,f12.6)') ' zen angle: ',zenith
 
   do i=1,nphot
 
@@ -312,7 +312,7 @@ program driver
      write(10,*) trim(my_jnames(i))//'   '//trim(rxn_string)
      write( *,'("  rate = ",e12.4," /sec")' ) tuv_prates(nlevels,i)
      do k=1,nlevels
-         write(10,'("  rate = ",e24.16," /sec")' ) tuv_prates(k,i)
+         write(10,'("  rate = ",e20.12," /sec")' ) tuv_prates(k,i)
      end do
 
      write(10,*) ' '
