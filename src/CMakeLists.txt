@@ -2,9 +2,12 @@
 # musica-photo-decomp-rates library
 
 set(PHOTO_SRC
-    module_prates_tuv.F90
-    module_rxn.F90
-    tuv_photolysis.F90
+    phot_specs_mod.F90
+    photo_utils.F90
+    etf_mod.F90
+    dissociation_class.F90
+    o3_dissociation_class.F90
+    jrates_mod.F90
    )
 
 add_library(musica-photolib ${PHOTO_SRC})

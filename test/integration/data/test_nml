@@ -2,10 +2,6 @@
  env_conds_file='data/MusicBox_env_cond_1col_c190109.nc'
  env_conds_lat=10.
  env_conds_lon=120.
-/
-&tuv_opts
  input_data_root = '../../inputs'
  wavelength_grid_file = 'wavelength_grid_waccm.nc'
- etf_file =  'wavelength_grid_waccm.nc'
- is_full_tuv = .true.
 /
