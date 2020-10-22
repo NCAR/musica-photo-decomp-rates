@@ -20,13 +20,23 @@ program test_jrates
 
   character(len=200) :: errmsg
   integer            :: errflg
-  integer, parameter :: nrxns = 4
+  integer, parameter :: nrxns = 14
   character(len=80)  :: rxn_eqns(nrxns)
   character(len=8), parameter :: jnames(nrxns) = (/ &
        'jo3a    ', &
        'jo3b    ', &
        'jch4a   ', &
-       'jch4b   ' &
+       'jch4b   ', &
+       'jco2    ', &
+       'jcof2   ', &
+       'jcofcl  ', &
+       'jhbr    ', &
+       'jhf     ', &
+       'jsf6    ', &
+       'jglyald ', &
+       'jhyac   ', &
+       'jmacr_a ', &
+       'jmacr_b ' &
        /)
 
   type(environ_conditions),pointer :: colEnvConds => null()
