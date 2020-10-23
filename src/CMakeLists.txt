@@ -7,6 +7,7 @@ set(PHOTO_SRC
     etf_mod.F90
     dissociation_class.F90
     o3_dissociation_class.F90
+    no2_dissociation_class.F90
     jrates_mod.F90
    )
 

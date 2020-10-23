@@ -5,6 +5,7 @@ module jrates_mod
   use phot_kind_mod, only: rk => kind_phot
   use dissociation_class, only: dissociation_t
   use o3_dissociation_class, only: o3_dissociation_t
+  use no2_dissociation_class, only: no2_dissociation_t
   use phot_specs_mod, only: phot_specs_t, phot_specs_array, NPhotSpecifiers, phot_specs_init
 
   implicit none
@@ -47,6 +48,7 @@ contains
 
     ! the molecule dissociation objects (instantiated only if needed)
     type(o3_dissociation_t), pointer :: o3_diss_obj => null()
+    type(no2_dissociation_t), pointer :: no2_diss_obj => null()
     type(dissociation_t), pointer :: diss_obj => null()
 
     call phot_specs_init(input_data_root)
@@ -65,6 +67,9 @@ contains
              case ('o3_dissociation_t')
                 allocate(o3_diss_obj)
                 call add_to_list( phot_specs_array(i),o3_diss_obj )
+             case ('no2_dissociation_t')
+                allocate(no2_diss_obj)
+                call add_to_list( phot_specs_array(i),no2_diss_obj )
              case default
                 errmsg = 'jrates_init: '//trim(jnames(j))//' not recognized'
                 errflg = -1

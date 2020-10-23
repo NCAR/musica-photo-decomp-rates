@@ -20,9 +20,10 @@ program test_jrates
 
   character(len=200) :: errmsg
   integer            :: errflg
-  integer, parameter :: nrxns = 14
+  integer, parameter :: nrxns = 15
   character(len=80)  :: rxn_eqns(nrxns)
   character(len=8), parameter :: jnames(nrxns) = (/ &
+       'jno2    ', &
        'jo3a    ', &
        'jo3b    ', &
        'jch4a   ', &

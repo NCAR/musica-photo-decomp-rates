@@ -1,7 +1,7 @@
 module phot_specs_mod
   use phot_kind_mod, only: rk => kind_phot
 
-  integer, parameter :: NPhotSpecifiers = 11
+  integer, parameter :: NPhotSpecifiers = 12
 
   integer, parameter :: max_files = 5
   integer, parameter :: max_rxns = 4
@@ -176,6 +176,17 @@ contains
     phot_specs_array(m)%filename(1) = trim(input_data_root)//'/XSQY/XS_MACR_JPL06.txt'
     phot_specs_array(m)%nskip(1) = 20
     phot_specs_array(m)%nread(1) = 146
+    phot_specs_array(m)%xfac(1)  = 1._rk
+
+    m=m+1
+    phot_specs_array(m)%diss_type = 'no2_dissociation_t'
+    phot_specs_array(m)%nchannels = 1
+    phot_specs_array(m)%equations(1) = 'NO2 -> NO + O(3P)'
+    phot_specs_array(m)%tag_names(1) = 'jno2'
+    phot_specs_array(m)%nfiles = 1
+    phot_specs_array(m)%filename(1) = trim(input_data_root)//'/DATAJ1/YLD/NO2_jpl11.yld'
+    phot_specs_array(m)%nskip(1) = 2
+    phot_specs_array(m)%nread(1) = 25
     phot_specs_array(m)%xfac(1)  = 1._rk
 
     if (m /= NPhotSpecifiers) then
