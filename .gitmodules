@@ -1,0 +1,6 @@
+[submodule "photo-utils"]
+	path = photo-utils
+	url = https://github.com/NCAR/musica-photo-utils
+[submodule "rad-trans"]
+	path = rad-trans
+	url = https://github.com/NCAR/musica-radiation-transfer

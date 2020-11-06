@@ -55,6 +55,16 @@ add_custom_target(copy_input_data ALL ${CMAKE_COMMAND} -E copy_directory
   ${CMAKE_CURRENT_SOURCE_DIR}/inputs ${CMAKE_BINARY_DIR}/inputs)
 
 ################################################################################
+# musica-photo-utils library
+
+add_subdirectory(photo-utils/src)
+include_directories(${CMAKE_BINARY_DIR}/photo-utils/src)
+
+# musica-radiation-transfer library
+
+add_subdirectory(rad-trans/src)
+include_directories(${CMAKE_BINARY_DIR}/rad-trans/src)
+
 # musica-photo-decomp-rates library
 
 add_subdirectory(src)
